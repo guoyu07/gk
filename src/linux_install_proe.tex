@@ -1,0 +1,359 @@
+\chapter{Ubuntu 7.10 安装 Pro.Engineer.Wildfire.v3.0 M080 for Linux}
+
+
+
+发信人: oicu (午夜阳光), 信区: Linux
+
+标  题: Ubuntu 7.10 安装 ProE.Wildfire.v3.0 M080
+
+发信站: BBS 蓝色星空站 (Wed Mar 26 01:55:47 2008), 站内
+
+Ubuntu 7.10 安装 Pro.Engineer.Wildfire.v3.0 M080 for Linux\cite{linux_install_proe}
+
+声明：
+
+只供个人学习研究，不得用于商业行为。
+
+PTC公司已不再开发新的Pro/E for Linux版，Pro/E Wildfire 3.0是目前已知最后一个Linux版本，Pro/E 4.0之后只有Windows版。
+
+安装方法参考 http://forum.ubuntu.org.cn/ 论坛里的相关帖子，本文主要讲一下配置。
+
+个人用户没有必要使用浮动授权，因此只介绍单机版(锁定的授权)的安装方法。
+
+硬件要求：
+
+网卡一张，内存推荐1G以上，显示器推荐使用19寸的，需要硬盘空间3G以上。
+
+本文测试使用的硬件平台：
+
+CPU：   P3E 850MHz
+
+内存：  128*3 SDR
+
+显卡：  GF2 MX400
+
+显示器：17 CRT
+
+操作系统：
+
+Ubuntu 7.10 中文版(32bit)
+
+下载软件(两个文件共1.2G左右)：
+
+http://www.verycd.com/groups/software/123786.topic
+
+TLF-SOFT-PTC.PRO.ENGINEER.WILDFIRE.v3.0.M080.LINUX-SHooTERS.nfo
+
+TLF-SOFT-PTC.PRO.ENGINEER.WILDFIRE.v3.0.M080.LINUX-SHooTERS.img
+
+
+这个光盘镜像只有英、法、日、德、意语言，没有中文，而且不带Pro/Mechanica，唯一一个与Mechanica有关的设置就是“定位其他安装目录(可选)”Locate Other Installation Locations (Optional)
+
+
+一些约定：
+
+根据实际情况修改，用过ProE的都知道默认的文件存放很凌乱的，什么都往用户目录里面放，因此建立好一系列目录便于管理及使用，目录尽量简短、不带空格。
+
+安装目录：
+
+/opt/PTC
+
+ProE程序文件安装目录：
+
+/opt/PTC/wf3
+
+授权文件存放目录：
+
+/opt/PTC/license
+
+默认工作目录：
+
+/opt/PTC/start
+
+trail.txt跟踪文件存放目录：
+
+/opt/PTC/start/trail
+
+用户配置存放目录：
+
+/opt/PTC/text
+
+虚拟光驱mount目录：
+
+/opt/CDROM
+
+用户名及组：
+
+oicu:oicu
+
+开始安装：
+
+安装前关掉所有桌面特效，ProE和compiz貌似有冲突，必须关了compiz才能用。如果是DELL的本子的话，建议先装个风扇控制的，要不过热会死机的。
+
+建立目录及安装需要的软件包：
+
+sudo mkdir -p /opt/\{PTC/\{license,start/trail,text,wf3\},CDROM\}
+
+sudo chown -R oicu:oicu /opt/PTC
+
+sudo chown -R oicu:oicu /opt/CDROM
+
+sudo apt-get -y install csh portmap
+
+sudo apt-get -y install libmotif3 libstdc++2.10-glibc2.2
+
+sudo apt-get -y install libgtk1.2 libgtk1.2-common
+
+安装Gmount-iso方便加载光盘镜像img文件：
+
+sudo apt-get -y install gmountiso
+
+安装后在Application-system-Gmountiso打开程序，默认只能挂载iso文件，打开文件类型选择为“所有文件”即可挂载img文件(附图)。
+
+运行安装程序：
+
+LANG=C
+
+sudo /opt/CDROM/setup
+
+暂时不要选择任何安装，把左下角显示的网卡MAC地址记下来。
+
+如果无法启动安装程序，试试export LANG=EN
+
+修改授权文件：
+
+cp /opt/CDROM/SHooTERS/ptc\_licfile.dat /opt/PTC/license/wf3\_licfile.dat
+
+chmod +w /opt/PTC/license/wf3\_licfile.dat
+
+gedit /opt/PTC/license/wf3\_licfile.dat
+
+将wf3\_licfile.dat文件中所有的 <HOSTID> 字符(包括<>符号在内)替换为网卡MAC地址(MAC地址的格式为xx-xx-xx-xx-xx)，然后保存。
+
+返回到setup界面选择 "Pro/Engineer" 进行安装英文版，安装目录选择为：
+
+/opt/PTC/wf3
+
+如果选择的是 "Custom Installer", 是自定义安装程序，仅仅是将所选择的文件复制到硬盘。
+
+在 license-config 界面，选择 "nodelocked license" 后指向刚才编辑的授权文件：
+
+/opt/PTC/license/wf3\_licfile.dat
+
+之后什么都不用再选择，一路Next即可。
+
+如果顺利的话，很快就安装完的。
+
+不要急着启动，还需要做一些设置才能启动ProE。
+
+sudo cp -rf /opt/CDROM/SHooTERS/wf3/* /opt/PTC/wf3/i486\_linux/obj
+
+制作启动脚本 "Wildfire3.0" 放到桌面或者 \~{}/.gnome2/nautilus-scripts/ 目录，下面为脚本内容：
+
+\#!/bin/sh
+
+cd /opt/PTC/start
+
+LANG=C
+
+cp /opt/PTC/text/config.pro /opt/PTC/wf3/text
+
+/opt/PTC/wf3/bin/proe1
+
+加上执行权限(附图)：
+
+chmod 755 \~{}/Desktop/Wildfire3.0
+
+脚本内容的解释：
+
+cd /opt/PTC/start 的作用是进入默认工作目录，根据情况修改。由于工作内容的不同，使用的配置可能不一样，cp那行的作用是切换不同的
+config设置，如果工作目录固定不变，可以不使用该行。
+
+使用中发现，上面的脚本中的环境变量LANG不能设置为en\_US.UTF-8以及"sudo dpkg-reconfigure locales"命令能查看到的任何语言，但是随便设置一个不存在的语言都可以启动ProE，不可以不设置。
+
+如果脚本放到 ~{}/.gnome2/nautilus-scripts/ 目录，可以在桌面点击右键，选择 "scripts->Wildfire3.0" 来启动ProE。
+
+安装到此结束。
+
+ProE的配置：
+
+建立一个 config.pro 文件，放在 /opt/PTC/text 目录中(如果上面的启动脚本没有使用cp那行，那就放在 /opt/PTC/start 目录中)，内容如下(!号开头的行是注释掉的，这是我个人用的部分配置，请根据情况修改，注意Linux系统和Windows不同，文件及目录是区分大小写的)：
+
+! Made by oicu\#lsxk.org 2008.03.25, Rev ProE.Wildfire3.0 for Linux
+
+! Modified: 2008-04-05, oicu\#lsxk.org
+
+!== Menus display language: English ==
+
+menu\_translation no
+
+msg\_translation no
+
+dialog\_translation no
+
+help\_translation no
+
+!== Menus display location language ==
+
+!menu\_translation both
+
+!msg\_translation yes
+
+!dialog\_translation yes
+
+!help\_translation yes
+
+!== Colors ==
+
+!pro\_colormap\_path /opt/PTC/text
+
+system\_colors\_file /opt/PTC/text/Pre-Wildfire-scheme-syscol.scl
+
+!== Drawing ==
+
+!drawing\_setup\_file /opt/PTC/text/jis.dtl
+
+!drawing\_view\_origin\_csys PRT\_CSYS\_DEF
+
+!format\_setup\_file /opt/PTC/text/jis.dtl
+
+!pro\_symbol\_dir /opt/PTC/text/symbol
+
+!save\_drawing\_picture\_file embed
+
+!== Environment ==
+
+!prehighlight no
+
+pro\_unit\_length unit\_mm
+
+pro\_unit\_mass unit\_kilogram
+
+pro\_unit\_sys mmks
+
+spin\_center\_display no
+
+!mass\_property\_calculate automatic
+
+!== Features ==
+
+allow\_anatomic\_features yes
+
+!== File Storage \& Retrieval
+
+file\_open\_default\_folder working\_directory
+
+!lang\_propagate yes
+
+!== search\_path ==
+
+!search\_path /opt/PTC/start
+
+template\_designasm /opt/PTC/text/startassy.asm
+
+template\_solidpart /opt/PTC/text/startpart.prt
+
+!== Model Display ==
+
+show\_shaded\_edges yes
+
+spin\_with\_orientation\_center no
+
+spin\_with\_part\_entities yes
+
+tangent\_edge\_display dimmed
+
+!== System ==
+
+set\_trail\_single\_step yes
+
+trail\_delay 0.9
+
+trail\_dir /opt/PTC/start/trail
+
+!== User Interface ==
+
+mdl\_tree\_cfg\_file /opt/PTC/text/tree-none.cfg
+
+visible\_message\_lines 3
+
+open\_window\_maximized yes
+
+!== Mapkeys ==
+
+mapkey purge @MAPKEY\_NAMEpurge;@MAPKEY\_LABELpurge;\
+
+mapkey(continued) @SYSTEM/opt/PTC/wf3/bin/purge;
+
+
+配置的说明：
+
+前面是设置显示语言为英文版，本文安装的就是英文版，可省略。
+
+allow\_anatomic\_features这行一定要加，可以增加一些高级命令。
+
+open\_window\_maximized是启动窗口最大化。
+
+file\_open\_default\_folder的作用是，点open打开文件时，默认打开的目录设置为工作目录（启动脚本中cd的目录）。
+
+trail\_dir是设置trail.txt文件存放目录，这样就不显得文件凌乱了，关于
+
+trail文件的作用可另行查阅资料。
+
+mapkey purge @MAPKEY\_NAMEpurge;@MAPKEY\_LABELpurge;\
+
+mapkey(continued) @SYSTEM/opt/PTC/wf3/bin/purge;
+
+这两行是设置了一个清理工作目录下所有旧版本文件的快捷键，打开ProE后，在自定义窗口把快捷键拖到工具栏即可使用。
+
+pro\_unit\_length 和 pro\_unit\_mass 是设置默认单位。
+
+show\_shaded\_edges 和 tangent\_edge\_display 是线的显示设置。
+
+不显示旋转中心：
+
+spin\_center\_display no
+
+ProE重定向时候的显示设置(旋转实体时)，后一个是旋转时候显示基准轴和基准面的：
+
+spin\_with\_orientation\_center no
+
+spin\_with\_part\_entities yes
+
+提示消息的行数：
+
+visible\_message\_lines 3
+
+其他的都是一些配置文件的路径设置和显示设置。
+
+save\_drawing\_picture\_file embed是设置预览文件嵌入到工程图中，点open打开文件时候就可以预览工程图了，使用该配置后，工程图的文件大小会增大很多。建议不使用。
+
+卸载ProE：
+
+sudo rm -rf /opt/PTC/*
+
+sudo rm -rf /opt/PTC/.* > /dev/null 2>\&1
+
+sudo -y rmdir /opt/PTC
+
+然后再检查一下用户目录 ~{}/ 内有没有残留的配置文件。
+
+可能存在的问题：
+
+运行ProE后可能会有如下的提示：
+
+Pro/Engineer could not initialize the specified locale "en\_US" and has reverted to running in English. Please check the locale settings before re-launching Pro/ENGINEER. 
+
+前面制作脚本那里提及的，环境变量的LANG语言随便设置都可以，因为安装的就是英文版的，这个提示不影响使用。中文系统用LANG=C时候不出现提示。
+
+
+※ 修改:·oicu 于 Sep  5 17:51:54 2010 修改本文·[FROM: 蓝色☆空]
+
+※ 来源:·四川大学蓝色星空站 http://lsxk.org·[FROM: 蓝色☆空]
+
+\bibliographystyle{plainnat}
+\bibliography{gk}
+\clearpage
+
+
+

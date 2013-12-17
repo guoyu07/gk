@@ -1,0 +1,212 @@
+\chapter{用十年学习编程}
+
+	\begin{center}著者： Peter Norvig\\ 翻译： Dai Yuwen\cite{tenyears}\end{center}
+
+
+\section{为何人人都这么着急？}
+
+
+信步走进任何一家书店，你会看到名为《如何在7天内学会Java》的书，还有各 种各样类似的书： 在几天内或几小时内学会Visual Basic, Windows, Internet等等，一眼望不到 尽头。我在Amazon 上做了如下的 强力检索 ：
+
+          \verb|pubdate: after 1992 and title: days and (title: learn or title: teach yourself)|
+
+得到了248个结果。前78个都是计算机类书籍（第79个是 Learn Bengali in 30 days）。我用"hours"替换"days"，得到了类似的结果： 更多的253书。前77本是计算机类书籍，第78本是 Teach Yourself Grammar and Style in 24 Hours。在前200本书中，有96\% 是 计算机类书籍。
+
+结论是：要么人们都在急急忙忙地学习计算机，要么计算机比其它任何东西都 容易学。没有书籍教你在几天内学会古典音乐、量子物理，或者是养狗。
+
+
+让我们分析一下，象一本名为《三天内学会Pascal》的书意味着什么：
+
+\begin{compactitem}
+\item 学习： 在三天里，你没有时间写一些重大的程序，并从成功或失败中 得益。你没有时间与有经验的程序员合作，并理解在那样的环境下工作是怎么回 事。一句话，你不会有时间学到太多东西。因此他们只能谈论一些肤浅的东西，而 不是深入的理解。正如亚力山大教皇所说，浅尝辄止是危险的事情。
+\item Pascal： 在三天时间里，你可能学会Pascal的语法（如果你 已经学过类似的语言），但你学不到更多的如何使用这些语法的知识。也就是说， 假如你曾是个BASIC程序员，你可以学着用Pascal语法写出BASIC风格的程序，但你不 可能了解Pascal真正的好处（和坏处）。那么关键是什么？ Alan Perlis 说过：“一种不改变你编程的思维方式的语言，不值得去学。” 一种可 能的情况是：你必须学一点儿Pascal（或可能性更大的象Visual Basic 或 JavaScript之类），因为你为了完成某种特定的任务，需要与一个现存的工具建立 接口。不过那不是学习如何编程，而是在学习如何完成那个任务。
+\item 三天内： 很不幸，这不够，原因由下一节告诉我们。
+\end{compactitem}
+
+\section{在十年里学会编程}
+
+研究表明 (Hayes，Bloom)在 任何一种领域内，象下棋、作曲、绘画、钢琴演奏、游泳、网球、以及原子物理学和拓 扑学，等等，要达到专家水平大约都要化十年时间。没有真正的捷径：即使是莫扎 特，4岁时就是音乐神童，13年后才开始写出世界级的作品。在另一方面，披头 士似乎在1964年的Ed Sullivan表演上一炮走红。但他们从1957年就开始表演，在 获得大众青睐后，他们的第一个重大成功，Sgt. Peppers，是1967年发 行的。Samuel Johnson （塞缪尔·约翰逊，英国辞典编纂家及作家）认为要花比十年更长的时间：“在任何领域中出类拔萃都 要用毕生的劳作来取得；它不可能用较低的代价获得。” 而Chaucer（乔叟，英 国诗人）感叹到：“人生短暂，学海无涯。”
+
+这是我为编程成功开出的方子：
+
+
+\begin{compactitem}
+\item 设法对编程感兴趣，并且因为它有趣而编一些程序。确保编程一直充满足够 乐趣，这样你才愿意投入十年宝贵时间。
+\item 与其他程序员交流； 阅读其它程序。这比任何书本或训练课程都 重要。
+\item 写程序。 最好的学习方式是 从实 践中学习。 用更技术性的话说，“在一个给定的领域内，个人的最大能力不 是自动地由扩展了的经验取得的，但即使是高度有经验的人也可以通过有意识的 努力来提高自己的能力” (p. 366) 和 “最有效的学习需要因人而异的适当难度，目标明确的任务，丰富的信息反 馈，以及重复的机会和错误修正。” (p. 20-21) 此书 Cognition in Practice: Mind，Mathematics，and Culture in Everyday Life 是阐明此观点的令人感兴趣的参考文献。
+\item 如果愿意，在大学里呆上4年或更长（在研究生院里）。你会接触到 一些需要学历证明的工作，你会对此领域有更深的理解。如果你不喜欢学校， 你可以（通过一 些贡献）在工作中获得相似的经验。在任何情况下，光啃书本是不够的。Eric Raymond，The New Hacker's Dictionary一书的作者，说过，“计算机科学不能把任何人变成编程 专家，就象光研究刷子和颜料不会使人变成画家一样。” 我雇佣过的最好的程序员 之一仅有高中程度；他做出了许多优秀的 软件，有他自己的新闻组， 而且通过股票期权，他无疑比我富有的多。
+\item 和其他程序员一起做项目。在其中的一些项目中作为最好的程序 员； 而在另一些项目中是最差的。当你是最好的，你能测试领导项目的能力，用你 的观点激发别人。当你是最差的，你学习杰出者是怎么做的，了解他们不喜欢做 什么（因为他们吩咐你做事）。
+\item 在其他程序员 之后接手项目。使自己理解别人写的程序。 当程序的原作者不在的时候，研究什么需要理解并且修改它。思考如何设计你的 程序以便后来者的维护。
+\item 学习至少半打的编程语言。包括一种支持类抽象的语言（象Java 或C++），一种支持函数化抽象的语言（象Lisp或ML），一种支持语法抽象的语 言（象 Lisp），一种支持声明规格说明的语言（象Prolog或C++ 的模板），一种支持 共行程序（coroutine）的语言（象Icon或Scheme），一种支持并行的语言（象Sisal）。
+\item 请记住“计算机科学”中有“计算机”一词。了解你的计算机要花多 长时间执行一条指令，从内存中取一个字（有cache），从磁盘中读取连续的字， 和在磁盘中找到新的位置。（答案）
+\item 参与一种语言标准化的工作。它可以是ANSI C++委员会， 也可以是决定你周围小范围内的编程风格是应该两个还是四个空格缩进。通 过任何一种方式，你了解到其他人在某种语言中的想法，他们的理解深度，甚至一 些他们这样想的原因。
+\item 找到适当的理由尽快地从语言标准化的努力中脱身。
+
+\end{compactitem}
+
+明白了这些，仅从书本中你能得到多少就成了一个问题。在我第一个孩子出生前， 我读了所有的（关于育儿的）How to 书籍，仍然感觉是个手足无措的新手。30个月以后，我 的第二个孩子快要出生了，我回头温习这些书了吗？ 没有。相反，我依靠我的个人 经验，它比专家写的数千页书更有用和可靠。
+
+Fred Brooks在他的随笔 《没有银弹》 中定出了一个寻找优秀软件设计者的三步计划：
+
+\begin{compactenum}
+\item 尽可能早地，有系统地识别顶级的设计人员。
+\item 为设计人员指派一位职业导师，负责他们技术方面的成长，仔细地为他们规划 职业生涯。
+\item 为成长中的设计人员提供相互交流和学习的机会。
+\end{compactenum}
+
+此计划假设某些人已经具备了杰出设计者的必要才能； 要做的只是如何恰当地诱 导他们。 Alan Perlis 说得更简明扼要：“每个人都能被教会雕刻：对米开朗其罗而言， 反倒是告诉他哪些事不要做。同样的道理也适用于优秀的程序员。”
+所以尽管买那本Java的书吧。你可能会从中学到点儿东西。但作为一个程序员，你不会在 几天内或24小时内，哪怕是几个月内改变你的人生，或你实际的水平。
+
+\section{参考文献}
+
+Bloom, Benjamin (ed.) \href{http://www.amazon.com/exec/obidos/ASIN/034531509X}{Developing Talent in Young People}, Ballantine, 1985.
+
+Brooks, Fred, \href{http://citeseer.nj.nec.com/context/7718/0}{No Silver Bullets}, IEEE Computer, vol. 20, no. 4, 1987, p. 10-19.
+
+Hayes, John R., \href{http://www.amazon.com/exec/obidos/ASIN/0805803092}{Complete Problem Solver} Lawrence Erlbaum, 1989.
+
+Lave, Jean, \href{http://www.amazon.com/exec/obidos/ASIN/0521357349}{Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life}, Cambridge University Press, 1988.
+
+\section{答案}
+
+2001年夏天典型的1GHz PC的各种操作要花的时间
+
+\begin{tabular}{|l|l|}
+\hline
+执行一条指令	 &1 nsec = (1/1,000,000,000) sec\\
+\hline
+从L1 cache memory 中取一个字&	 2 nsec\\
+\hline
+从内存中取一个字	 &10 nsec\\
+\hline
+从磁盘的连续位置取一个字	 &200 nsec\\
+\hline
+从磁盘的新位置取一个字(seek)	& 8,000,000nsec = 8msec\\
+\hline
+\end{tabular}
+
+\section{附录：语言的选择}
+
+不少人问我，他们首先该学哪种编程语言。没有绝对的答案，不过请考虑以下几 点：
+
+
+\begin{compactitem}
+\item 用你的朋友的。当被问起“我该用哪种操作系统，Windows，Unix， 还是Mac？”，我总是回答：“你朋友用什么，你就用什么。” 你从朋友那能学 到知识，这种优势可以抵销不同操作系统或语言之间本质的差异。也考虑你将来 的朋友：程序员社区 — 你将成为它的一部分如果你继续往前走的话。你选择的 语言是否有一个成长中的社区，还是人数不多、即将消亡？ 有没有书籍、网站、 在线论坛回答你的问题？ 你喜欢论坛里的那些人吗？
+\item Keep it simple, stupid. 象C++和Java这样的语言是为经验丰富的 程序员组成的团队进行专业开发而设计的，他们专注于代码运行时的效率。因此， 这些语言有些部分非常复杂。 而你关注的是如何编程，不需要那些复杂性。你 需要的是这样的语言： 对单个的编程新手来说，它易学易记。
+\item 练习。你偏爱哪种学弹钢琴的方式：通常的交互式的方式，你一 按下琴键就能听到音符；还是“批量”模式，你只有弹完整首曲子才能听到音符？ 显然，用交互模式学习弹钢琴更容易些，编程也一样。坚持用交互模式学习并使 用一种语言。
+
+\end{compactitem}
+
+有了上面的准则，我推荐的第一个编程语言是Python或Scheme。因人而异，还有其它 好的选择。如果你的年纪是10岁以下，你可能更喜欢Alice。关键是你要选择并开始实践。
+
+\section{附录：书籍和其它资源}
+
+
+不少人问我，他们该从什么书籍或网页开始学起。我重申“仅从书本里学习是不 够的。” 但我还是推荐：
+
+\begin{compactitem}
+\item Scheme: \href{http://www.amazon.com/gp/product/0262011530}{Structure and Interpretation of Computer Programs (Abelson \& Sussman)}可能是最好 的计算机科学的入门书，而且它的确把讲授编程作为理解计算机科学的一种方法。 但它具有挑战性，会让许多通过其它方式可能成功的人望而却步。
+\item Scheme: \href{http://www.amazon.com/gp/product/0262062186}{How to Design Programs (Felleisen et al.)}是关于如何用一种优美的、函数化的方式设 计程序的最好的书之一。
+\item Python: \href{http://www.amazon.com/gp/product/1887902996}{Python Programming: An Intro to CS (Zelle)}是优秀的Python入门指导。
+\item Python: \href{http://python.org/}{Python.org}上有许多在线\href{http://wiki.python.org/moin/BeginnersGuide}{指导}。
+\item Oz: \href{http://www.amazon.com/gp/product/0262220695}{Concepts, Techniques, and Models of Computer Programming (Van Roy \& Haridi)} 被视为Abelson \& Sussman的当代继承者。它是对编程的高层次概念的巡视。 涉及的范围比Abelson \& Sussman更广，同时可能更容易学习和跟进。 它用了叫 做Oz的语言，不太知名，却可以作为学习其它语言的基础。
+\end{compactitem}
+
+\section{脚注}
+
+This page also available in Japanese translation thanks to Yasushi Murakawa, in Spanish translation thanks to Carlos Rueda and in German translation thanks to Stefan Ram.
+
+T. Capey points out that the Complete Problem Solver page on Amazon now has the "Teach Yourself Bengali in 21 days" and "Teach Yourself Grammar and Style" books under the "Customers who shopped for this item also shopped for these items" section. I guess that a large portion of the people who look at that book are coming from this page.
+
+\begin{flushright}
+\href{http://www.norvig.com/index.html}{Peter Norvig(Copyright 2001)}
+\end{flushright}
+
+
+\vspace{20pt}
+
+\begin{center}\textbf{用十年学习编程}\end{center}
+	
+
+出处：网络
+
+	
+
+前几天，系里排课，有教师讲“语言课（C++、JAVA等）随便找个老师就能上”。我哑然，如果计算机专业的老师都这样，我不知，会教出什么样的学生来。
+
+今天浏览互联网，无意看到下面的文章，大家看后可以点评。以下是译文与原文。
+
+
+为什么每个人都急不可耐？
+
+走进任何一家书店，你会看见《Teach Yourself Java in 7 Days》（7天Java无师自通）的旁边是一长排看不到尽头的类似书籍，它们要教会你Visual Basic、Windows、Internet等等，而只需要几天甚至几小时。我在Amazon.com上进行了如下搜索：
+
+pubdate: after 1992 and title: days and (title: learn or title: teach yourself)
+
+(出版日期：1992年后 and 书名：天 and （书名：学会 or 书名：无师自通）)
+
+我一共得到了248个搜索结果。前面的78个是计算机书籍（第79个是《Learn Bengali in 30 days》，30天学会孟加拉语）。我把关键词“days”换成“hours”，得到了非常相似的结果：这次有253本书，头77本是计算机书籍，第78本是《Teach Yourself Grammar and Style in 24 Hours》（24小时学会文法和文体）。头200本书中，有96\%是计算机书籍。
+
+结论是，要么是人们非常急于学会计算机，要么就是不知道为什么计算机惊人地简单，比任何东西都容易学会。没有一本书是要在几天里教会人们欣赏贝多芬或者量子物理学，甚至怎样给狗打扮。
+
+让我们来分析一下像《Learn Pascal in Three Days》（3天学会Pascal）这样的题目到底是什么意思：
+
+\begin{compactitem}
+\item 学会：在3天时间里，你不够时间写一些有意义的程序，并从它们的失败与成功中学习。你不够时间跟一些有经验的程序员一起工作，你不会知道在那样的环境中是什么滋味。简而言之，没有足够的时间让你学到很多东西。所以这些书谈论的只是表面上的精通，而非深入的理解。如Alexander Pope（英国诗人、作家，1688-1744）所言，一知半解是危险的（a little learning is a dangerous thing）
+\item Pascal：在3天时间里你可以学会Pascal的语法（如果你已经会一门类似的语言），但你无法学到多少如何运用这些语法。简而言之，如果你是，比如说一个Basic程序员，你可以学会用Pascal语法写出Basic风格的程序，但你学不到Pascal真正的优点（和缺点）。那关键在哪里？Alan Perlis（ACM第一任主席，图灵奖得主，1922-1990）曾经说过：“如果一门语言不能影响你对编程的想法，那它就不值得去学”。另一种观点是，有时候你不得不学一点Pascal（更可能是Visual Basic和javascript之类）的皮毛，因为你需要接触现有的工具，用来完成特定的任务。但此时你不是在学习如何编程，你是在学习如何完成任务。
+\item 3天：不幸的是，这是不够的，正如下一节所言。
+\end{compactitem}
+
+\textbf{10年编程无师自通}
+
+
+一些研究者（Hayes、Bloom）的研究表明，在许多领域，都需要大约10 年时间才能培养出专业技能，包括国际象棋、作曲、绘画、钢琴、游泳、网球，以及神经心理学和拓扑学的研究。似乎并不存在真正的捷径：即使是莫扎特，他4岁就显露出音乐天才，在他写出世界级的音乐之前仍然用了超过13年时间。再看另一种音乐类型的披头士，他们似乎是在1964年的Ed Sullivan节目中突然冒头的。但其实他们从1957年就开始表演了，即使他们很早就显示出了巨大的吸引力，他们第一次真正的成功——Sgt. Peppers——也要到1967年才发行。Samuel Johnson（英国诗人）认为10 年还是不够的：“任何领域的卓越成就都只能通过一生的努力来获得；稍低一点的代价也换不来。”（Excellence in any department can be attained only by the labor of a lifetime; it is not to be purchased at a lesser price.） 乔叟（Chaucer，英国诗人，1340-1400）也抱怨说：“生命如此短暂，掌握技艺却要如此长久。”（the lyf so short, the craft so long to lerne.）
+
+下面是我在编程这个行当里获得成功的处方：
+
+\begin{compactitem}
+\item 对编程感兴趣，因为乐趣而去编程。确定始终都能保持足够的乐趣，以致你能够将10年时间投入其中。
+
+\item 跟其他程序员交谈；阅读其他程序。这比任何书籍或训练课程都更重要。
+
+\item 编程。最好的学习是从实践中学习。用更加技术性的语言来讲，“个体在特定领域最高水平的表现不是作为长期的经验的结果而自动获得的，但即使是非常富有经验的个体也可以通过刻意的努力而提高其表现水平。”（p. 366），而且“最有效的学习要求为特定个体制定适当难度的任务，有意义的反馈，以及重复及改正错误的机会。”（p. 20-21）《Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life》（在实践中认知：心智、数学和日常生活的文化）是关于这个观点的一本有趣的参考书。
+
+\item 如果你愿意，在大学里花上4年时间（或者再花几年读研究生）。这能让你获得一些工作的入门资格，还能让你对此领域有更深入的理解，但如果你不喜欢进学校，（作出一点牺牲）你在工作中也同样能获得类似的经验。在任何情况下，单从书本上学习都是不够的。“计算机科学的教育不会让任何人成为内行的程序员，正如研究画笔和颜料不会让任何人成为内行的画家”, Eric Raymond，《The New Hacker's Dictionary》（新黑客字典）的作者如是说。我曾经雇用过的最优秀的程序员之一仅有高中学历；但他创造出了许多伟大的软件，甚至有讨论他本人的新闻组，而且股票期权让他达到我无法企及的富有程度（译注：指Jamie Zawinski，Xemacs和Netscape的作者）。
+
+\item 跟别的程序员一起完成项目。在一些项目中成为最好的程序员；在其他一些项目中当最差的一个。当你是最好的程序员时，你要测试自己领导项目的能力，并通过你的洞见鼓舞其他人。当你是最差的时候，你学习高手们在做些什么，以及他们不喜欢做什么（因为他们让你帮他们做那些事）。
+
+\item 接手别的程序员完成项目。用心理解别人编写的程序。看看在没有最初的程序员在场的时候理解和修改程序需要些什么。想一想怎样设计你的程序才能让别人接手维护你的程序时更容易一些。
+
+\item 学会至少半打编程语言。包括一门支持类抽象（class abstraction）的语言（如Java或C++），一门支持函数抽象（functional abstraction）的语言（如Lisp或ML），一门支持句法抽象（syntactic abstraction）的语言（如Lisp），一门支持说明性规约（declarative specification）的语言（如Prolog或C++模版），一门支持协程（coroutine）的语言（如Icon或Scheme），以及一门支持并行处理（parallelism）的语言（如Sisal）。
+
+\item 记住在“计算机科学”这个词组里包含“计算机”这个词。了解你的计算机执行一条指令要多长时间，从内存中取一个word要多长时间（包括缓存命中和未命中的情况），从磁盘上读取连续的数据要多长时间，定位到磁盘上的新位置又要多长时间。（答案在这里。）
+
+\item 尝试参与到一项语言标准化工作中。可以是ANSI C++委员会，也可以是决定自己团队的编码风格到底采用2个空格的缩进还是4个。不论是哪一种，你都可以学到在这门语言中到底人们喜欢些什么，他们有多喜欢，甚至有可能稍微了解为什么他们会有这样的感觉。
+
+\item 拥有尽快从语言标准化工作中抽身的良好判断力。
+
+\end{compactitem}
+
+
+
+抱着这些想法，我很怀疑从书上到底能学到多少东西。在我第一个孩子出生前，我读完了所有“怎样……”的书，却仍然感到自己是个茫无头绪的新手。30个月后，我第二个孩子出生的时候，我重新拿起那些书来复习了吗？不。相反，我依靠我自己的经验，结果比专家写的几千页东西更有用更靠得住。
+
+Fred Brooks在他的短文《No Silver Bullets》（没有银弹）中确立了如何发现杰出的软件设计者的三步规划：
+
+\begin{compactenum}
+\item 尽早系统地识别出最好的设计者群体。
+\item 指派一个事业上的导师负责有潜质的对象的发展，小心地帮他保持职业生涯的履历。
+\item 让成长中的设计师们有机会互相影响，互相激励。
+\end{compactenum}
+
+
+
+这实际上是假定了有些人本身就具有成为杰出设计师的必要潜质；要做的只是引导他们前进。Alan Perlis说得更简洁：“每个人都可以被教授如何雕塑；而对米开朗基罗来说，能教给他的倒是怎样能够不去雕塑。杰出的程序员也一样”。
+
+所以尽管去买那些Java书；你很可能会从中找到些用处。但你的生活，或者你作为程序员的真正的专业技术，并不会因此在24小时、24天甚至24个月内发生真正的变化。
+
+出处：网络
+
+\bibliographystyle{plainnat}
+\bibliography{gk}
+\clearpage
