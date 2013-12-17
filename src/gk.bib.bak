@@ -17,6 +17,202 @@
   url = {http://blog.csdn.net/lingyun2005/article/details/5623666}
 }
 
+@MISC{kinglear,
+  author = {kinglear},
+  title = {胡侃理论计算机},
+  year = {2005},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://www.cnblogs.com/kinglear/archive/2005/03/21/122592.html}
+}
+
+@MISC{linux_install_proe,
+  author = {oicu (午夜阳光)},
+  title = {Ubuntu 7.10 安装 ProE.Wildfire.v3.0 M080},
+  owner = {guoyu},
+  timestamp = {2013.12.08},
+  url = {http://lsxk.org/bbscon.php?bid=48&id=11999}
+}
+
+@MISC{sir0,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(0)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002484634.A&num=1998}
+}
+
+@MISC{sir1,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(1)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002484706.A&num=1999}
+}
+
+@MISC{sir10,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(10)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485217.A&num=2008}
+}
+
+@MISC{sir2,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(2)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002484893.A&num=2000}
+}
+
+@MISC{sir3,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(3)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002484932.A&num=2001}
+}
+
+@MISC{sir4,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(4)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002484634.A&num=2412}
+}
+
+@MISC{sir5,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(5)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485013.A&num=2003}
+}
+
+@MISC{sir6,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(6)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485050.A&num=2004}
+}
+
+@MISC{sir7,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(7)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485100.A&num=2005}
+}
+
+@MISC{sir8,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(8)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485139.A&num=2006}
+}
+
+@MISC{sir9,
+  author = {sir},
+  title = {胡侃学习(理论)计算机(9)},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.1002485191.A&num=2007}
+}
+
+@MISC{tcs1,
+  author = {sir},
+  title = {理论计算机科学漫谈(1)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975553688.A&num=1793}
+}
+
+@MISC{tcs2,
+  author = {sir},
+  title = {理论计算机科学漫谈(2)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975554599.A&num=1408}
+}
+
+@MISC{tcs3,
+  author = {sir},
+  title = {理论计算机科学漫谈(3)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975555037.A&num=1409}
+}
+
+@MISC{tcs4,
+  author = {sir},
+  title = {理论计算机科学漫谈(4)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975555875.A&num=1410}
+}
+
+@MISC{tcs5,
+  author = {sir},
+  title = {理论计算机科学漫谈(5)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975557390.A&num=1411}
+}
+
+@MISC{tcs6,
+  author = {sir},
+  title = {理论计算机科学漫谈(6)},
+  year = {2000},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://bbs.nju.edu.cn/vd306802/bbscon?board=Mathematics&file=M.975557912.A&num=1412}
+}
+
+@MISC{smart_question,
+  author = {艾瑞克.史蒂文.雷蒙德（Eric Steven Raymond）,瑞克.莫恩（Rick Moen），王刚翻译},
+  title = {提问的智慧},
+  year = {2001},
+  owner = {guoyu},
+  timestamp = {2013.12.07},
+  url = {http://www.beiww.com/doc/oss/smart-questions.html}
+}
+
+@MISC{fedora_error_check,
+  author = {tackming2008},
+  title = {问题贴请贴出errors log},
+  year = {2012},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://tieba.baidu.com/p/1936446609}
+}
+
+@MISC{tenyears,
+  author = {Dai Yuwen},
+  title = {用十年学习编程},
+  owner = {guoyu},
+  timestamp = {2013.12.05},
+  url = {http://daiyuwen.freeshell.org/gb/misc/21-days-cn.html}
+}
+
 @MISC{The_Elements_of_User_Experience_cn,
   author = {一叶千鸟},
   title = {用户体验的要素PPT中文模型},
@@ -43,11 +239,43 @@
   url = {天涯论坛}
 }
 
+@MISC{sopoor,
+  author = {涂南博士},
+  title = {你既然这么穷，为什么不去赚钱，来搞什么研究？},
+  owner = {guoyu},
+  timestamp = {2013.12.06},
+  url = {http://www.drtu.com/research/index.htm}
+}
+
+@MISC{hero_die,
+  author = {燕十三},
+  title = {英雄的落幕，痞子的横行!},
+  owner = {guoyu},
+  timestamp = {2013.12.10},
+  url = {http://blog.sina.com.cn/s/blog_402318990100po7j.html}
+}
+
+@MISC{love,
+  author = {苏仁(少年慕黄老)},
+  title = {究竟是喜欢一个人本身，还是喜欢一种预期},
+  owner = {guoyu},
+  timestamp = {2013.12.14},
+  url = {http://www.douban.com/group/topic/17049520/}
+}
+
 @MISC{chengmeng_immortal,
   author = {陈虻},
   title = {记录今天就是记录历史},
   owner = {guoyu},
   timestamp = {2013.12.04},
   url = {网络}
+}
+
+@MISC{linux_wiki,
+  author = {鲁塔弗的博客},
+  title = {linux高级命令手册},
+  owner = {guoyu},
+  timestamp = {2013.12.14},
+  url = {http://lutaf.com/linux-wiki.htm}
 }
 
